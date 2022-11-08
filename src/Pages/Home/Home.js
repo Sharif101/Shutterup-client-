@@ -4,6 +4,8 @@ import Carousel from "react-bootstrap/Carousel";
 import pic1 from "../../assest/mountains-100367_960_720.jpg";
 import pic2 from "../../assest/sunrise-1014712_960_720.jpg";
 import pic3 from "../../assest/parrot-3601194_960_720.jpg";
+import bpic from "../../assest/trees-3822149_960_720.jpg";
+import bpic1 from "../../assest/mountains-1587287_960_720.jpg";
 import "./Home.css";
 
 const Home = () => {
@@ -44,6 +46,46 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
+      {/* ------------------------------------------------ */}
+
+      <div className="upload">
+        <Row className="justify-content-between">
+          <Col lg="3">
+            <div className="up-text">
+              <h1>Latest Updated</h1>
+              <hr />
+              <p>
+                With over 5 years of experience, numerous workshops and features
+                in top wedding publications.
+              </p>
+              <button>Read This</button>
+            </div>
+          </Col>
+          <Col lg="4">
+            <div className="text-pix">
+              <div className="img">
+                <img src={bpic} alt="" />
+              </div>
+              <div className="text">
+                <h4>Travel</h4>
+                <p>Your choice to be photograper is better</p>
+              </div>
+            </div>
+          </Col>
+          <Col lg="4">
+            <div className="text-pix">
+              <div className="img">
+                <img src={bpic1} alt="" />
+              </div>
+              <div className="text">
+                <h4>EDITORIAL, NIGHT, PHOTOGRAPHY</h4>
+                <p>What your friends think about photographers</p>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </div>
     </div>
   );
 };

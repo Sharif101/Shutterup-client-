@@ -33,6 +33,59 @@
     font-size: 14px;
 }
 
+.upload
+{
+    margin: 150px 0;
+}
+.up-text h1
+{
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+.up-text p
+{
+    font-size: 14px;
+    color: rgb(143, 143, 143);
+    padding-bottom: 10px;
+}
+.up-text button
+{
+    padding: 5px 25px;
+    border: 1px solid black;
+    background: none;
+    transition: .6s;
+}
+.up-text button:hover
+{
+    background-color: black;
+    color: white;
+}
+
+.text-pix .img img
+{
+    width: 100%;
+    height: 250px;
+}
+.text-pix .text
+{
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.text-pix .text h4
+{
+    color: rgb(100, 99, 99);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.text-pix .text p
+{
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+}
+
 @media screen and (max-width:576px) {
     .slide img
     {
@@ -58,4 +111,13 @@
         {
             font-size: 12px;
         }   
+
+        .upload
+        {
+            margin: 80px 0;
+        }
+        .text-pix
+        {
+            margin-top: 20px;
+        }
 }
