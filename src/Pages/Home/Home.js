@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import pic1 from "../../assest/mountains-100367_960_720.jpg";
 import pic2 from "../../assest/sunrise-1014712_960_720.jpg";
