@@ -86,6 +86,47 @@ const Home = () => {
           </Col>
         </Row>
       </div>
+
+      {/* ----------------------------------- */}
+      <div className="ser">
+        <h2>Types of Photography</h2>
+        <hr />
+        <div className="services">
+          <div className="single-srvice">
+            <h5>Landscape</h5>
+          </div>
+          <div className="single-srvice">
+            <h5>Wildlife</h5>
+          </div>
+          <div className="single-srvice">
+            <h5>Macro</h5>
+          </div>
+          <div className="single-srvice">
+            <h5>Underwater</h5>
+          </div>
+          <div className="single-srvice">
+            <h5>Astrophotography</h5>
+          </div>
+          <div className="single-srvice">
+            <h5>Aerial Photography</h5>
+          </div>
+          <div className="single-srvice">
+            <h5>Scientific</h5>
+          </div>
+          <div className="single-srvice">
+            <h5>Portraits</h5>
+          </div>
+        </div>
+        <div className="ser-text">
+          <p>
+            On one hand, it’s good to know that you aren’t missing out on good
+            pictures from photographers who capture different subjects than you
+            do. But more importantly, when you see a wide range of photographic
+            types and styles, you might be inspired to try out another genre of
+            photography for yourself.{" "}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
