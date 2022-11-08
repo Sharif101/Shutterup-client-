@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
@@ -8,35 +9,35 @@ const Footer = () => {
       <footer className="footer">
         <ul class="icons">
           <li>
-            <a href="#">
+            <Link>
               <FaFacebook />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link>
               <FaInstagram />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link>
               <FaLinkedin />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link>
               <FaTwitter />
-            </a>
+            </Link>
           </li>
         </ul>
         <ul class="menu">
           <li>
-            <a href="#">Home</a>
+            <Link>Home</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link>About</Link>
           </li>
           <li>
-            <a href="#">Contact Us</a>
+            <Link>Contact Us</Link>
           </li>
         </ul>
         <div class="footer-copyright">
