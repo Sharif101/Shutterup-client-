@@ -36,6 +36,8 @@ const Header = () => {
             <Nav className="ms-auto">
               <Link to="/">Home</Link>
               <Link to="/services">Services</Link>
+              <Link to="/addservice">Add service</Link>
+              <Link to="/review">My review</Link>
               <Link to="/blog">Blog</Link>
 
               {/* -------------------------- */}
