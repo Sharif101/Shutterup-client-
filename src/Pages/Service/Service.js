@@ -1,13 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Card from "react-bootstrap/Card";
+import "./Service.css";
 
-const Service = () => {
+const Service = ({ service }) => {
+  let { name, _id, image_url, rataing, details, price } = service;
   return (
     <div>
-      <h2>service</h2>
-      <Link to="/login">
-        <button>login</button>
-      </Link>
+      <Card>
+        <Card.Img className="card-img" variant="top" src={image_url} />
+        <Card.Body className="card-cour">
+          <Card.Title>{name}</Card.Title>
+          <Card.Text>Rataing: {rataing}</Card.Text>
+          {/* <Link to={`/courses/${id}`}>
+            <button className="enroll-btn">
+              Enroll me
+              <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+            </button>
+          </Link> */}
+        </Card.Body>
+      </Card>
     </div>
   );
 };

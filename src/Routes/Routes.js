@@ -7,7 +7,8 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Review from "../Pages/Review/Review";
-import Service from "../Pages/Service/Service";
+import Services from "../Pages/Services/Services";
+
 import Privateroute from "./Privateroute";
 
 export const routes = createBrowserRouter([
@@ -21,7 +22,10 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Service></Service>,
+        loader: async () => {
+          return fetch("http://localhost:5000/services");
+        },
+        element: <Services></Services>,
       },
       {
         path: "/addservice",
