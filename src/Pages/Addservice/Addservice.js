@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Addservice.css";
 
 const Addservice = () => {
   let title = "Shutter Up -addservice";
@@ -31,14 +32,14 @@ const Addservice = () => {
     setService(newService);
   };
   return (
-    <div>
-      <h3>AddService</h3>
+    <div className="add_service_container">
+      <h3 className="add_title">Add your service</h3>
       <form onSubmit={handleAddUser}>
         <input
           onBlur={handleInputBlur}
           type="text"
           name="name"
-          placeholder="name"
+          placeholder="Service Name"
           required
         />
         <br />
@@ -46,7 +47,7 @@ const Addservice = () => {
           onBlur={handleInputBlur}
           type="text"
           name="price"
-          placeholder="price"
+          placeholder="Service Fee"
           required
         />
         <br />
@@ -54,7 +55,7 @@ const Addservice = () => {
           onBlur={handleInputBlur}
           type="text"
           name="rating"
-          placeholder="rating"
+          placeholder="Rating"
           required
         />
         <br />
@@ -62,21 +63,23 @@ const Addservice = () => {
           onBlur={handleInputBlur}
           type="text"
           name="image_url"
-          placeholder="imd_address"
+          placeholder="Image Url"
           required
         />
         <br />
-        {/* <input className='text_area' onBlur={handleInputBlur} type="textarea" name='details' placeholder='details' required/>
-                <br /> */}
         <textarea
           onBlur={handleInputBlur}
+          placeholder="Service Details"
           name="details"
           id=""
           cols="30"
           rows="5"
         ></textarea>
+        <br />
+        <button className="add_service_btn" type="submit">
+          Add Service
+        </button>
       </form>
-      <button type="submit">Add Service</button>
     </div>
   );
 };
