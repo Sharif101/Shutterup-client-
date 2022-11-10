@@ -7,8 +7,12 @@ import pic3 from "../../assest/parrot-3601194_960_720.jpg";
 import bpic from "../../assest/trees-3822149_960_720.jpg";
 import bpic1 from "../../assest/mountains-1587287_960_720.jpg";
 import "./Home.css";
+import { Link, useLoaderData } from "react-router-dom";
+import LimitService from "../LimitService/LimitService";
 
 const Home = () => {
+  let limit_service = useLoaderData();
+  console.log(limit_service);
   return (
     <div>
       <Carousel>
@@ -87,7 +91,25 @@ const Home = () => {
         </Row>
       </div>
 
+      {/* -------------------------------------------- */}
+
+      {/* <h1>{limit_service[0].name}</h1> */}
+      <div className="limit">
+        <h2>Here is some service</h2>
+        <hr />
+        <div className="limit_service">
+          {limit_service.map((lim_ser) => (
+            <LimitService lim_ser={lim_ser} key={lim_ser._id}></LimitService>
+          ))}
+        </div>
+        <div className="limit-btn-showall">
+          <Link to="/services">
+            <button>Show All</button>
+          </Link>
+        </div>
+      </div>
       {/* ----------------------------------- */}
+
       <div className="ser">
         <h2>Types of Photography</h2>
         <hr />
