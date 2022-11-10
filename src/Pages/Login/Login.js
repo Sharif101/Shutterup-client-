@@ -10,17 +10,22 @@ import { useContext } from "react";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { useState } from "react";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import Loader from "../../Utilities/Loader/Loader";
 
 const Login = () => {
   let title = "Shutter Up -Login";
   document.title = title;
   let [error, setError] = useState("");
 
-  let { providerlogin, githubLogin } = useContext(AuthContext);
+  let { providerlogin, githubLogin, signIn, loading } = useContext(AuthContext);
   let navigate = useNavigate();
   let location = useLocation();
 
   let from = location.state?.from?.pathname || "/";
+
+  if (loading) {
+    return <Loader></Loader>;
+  }
 
   const googleProvider = new GoogleAuthProvider();
   const githubprovider = new GithubAuthProvider();
@@ -35,7 +40,7 @@ const Login = () => {
       .catch((error) => console.error(error));
   };
 
-  let { signIn } = useContext(AuthContext);
+  // let { signIn } = useContext(AuthContext);
 
   let handleSubmit = (event) => {
     event.preventDefault();

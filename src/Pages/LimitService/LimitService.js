@@ -25,7 +25,7 @@ const LimitService = ({ lim_ser }) => {
                 : lim_ser.details}
             </small>
           </Card.Text>
-          <Card.Text>Rataing: {lim_ser.rataing}</Card.Text>
+          <Card.Text>Rating: {lim_ser.rataing}</Card.Text>
         </Card.Body>
       </Card>
     </div>
