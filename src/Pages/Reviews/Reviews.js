@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Reviews.css";
 
 const Reviews = ({ totalrev, handleDelete }) => {
@@ -12,7 +13,10 @@ const Reviews = ({ totalrev, handleDelete }) => {
         <p>{message}</p>
       </div>
       <div className="rev-btn">
-        <button>edit</button>
+        <Link to={`/updatereviews/${_id}`}>
+          {" "}
+          <button>edit</button>
+        </Link>
         <button onClick={() => handleDelete(_id)}>delete</button>
       </div>
     </div>

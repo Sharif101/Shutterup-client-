@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -92,24 +92,30 @@ const ServiceDetails = () => {
         </Card.Body>
       </Card>
 
-      <div className="add_review">
-        <form onSubmit={handleReview}>
-          <div>
-            <textarea
-              placeholder="Review"
-              name="message"
-              id=""
-              cols="50"
-              rows="2"
-            ></textarea>
-          </div>
-          <div>
-            <button className="add-review-btn" type="submit">
-              send
-            </button>
-          </div>
-        </form>
-      </div>
+      {user?.uid ? (
+        <div className="add_review">
+          <form onSubmit={handleReview}>
+            <div>
+              <textarea
+                placeholder="Review"
+                name="message"
+                id=""
+                cols="50"
+                rows="2"
+              ></textarea>
+            </div>
+            <div>
+              <button className="add-review-btn" type="submit">
+                send
+              </button>
+            </div>
+          </form>
+        </div>
+      ) : (
+        <p>
+          Please <Link to="/login">Login</Link> to add a review
+        </p>
+      )}
 
       {/* --------------show commnet------------------ */}
       {reviewdata.map((rev) => (
