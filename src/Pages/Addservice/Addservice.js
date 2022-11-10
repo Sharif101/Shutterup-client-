@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import "./Addservice.css";
 
 const Addservice = () => {
@@ -12,7 +13,7 @@ const Addservice = () => {
   const handleAddUser = (event) => {
     event.preventDefault();
     console.log(service);
-    fetch("http://localhost:5000/services", {
+    fetch("https://server-theta-henna.vercel.app/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -22,7 +23,7 @@ const Addservice = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          alert("User added successfully");
+          toast.success("Successfully added");
           event.target.reset();
         }
       });
@@ -38,6 +39,7 @@ const Addservice = () => {
   };
   return (
     <div className="add_service_container">
+      <Toaster position="top-center" reverseOrder={false} />
       <h3 className="add_title">Add your service</h3>
       <form onSubmit={handleAddUser}>
         <input

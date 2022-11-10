@@ -1,10 +1,10 @@
 import React from "react";
 import "./Reviews.css";
 
-const Reviews = ({ totalrev }) => {
-  let { message, reviewItem } = totalrev;
+const Reviews = ({ totalrev, handleDelete }) => {
+  let { message, reviewItem, _id } = totalrev;
   return (
-    <div className="all-rev d-flex justify-content-between">
+    <div className="all-rev">
       <div className="rev">
         <h6>
           Service Name: <span>{reviewItem}</span>
@@ -13,7 +13,7 @@ const Reviews = ({ totalrev }) => {
       </div>
       <div className="rev-btn">
         <button>edit</button>
-        <button>delete</button>
+        <button onClick={() => handleDelete(_id)}>delete</button>
       </div>
     </div>
   );

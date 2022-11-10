@@ -20,21 +20,23 @@ export const routes = createBrowserRouter([
       {
         path: "/",
         loader: async () => {
-          return fetch("http://localhost:5000/");
+          return fetch("https://server-theta-henna.vercel.app");
         },
         element: <Home></Home>,
       },
       {
         path: "/services",
         loader: async () => {
-          return fetch("http://localhost:5000/services");
+          return fetch("https://server-theta-henna.vercel.app/services");
         },
         element: <Services></Services>,
       },
       {
         path: "/services/:id",
         loader: async ({ params }) => {
-          return fetch(`http://localhost:5000/services/${params.id}`);
+          return fetch(
+            ` https://server-theta-henna.vercel.app/services/${params.id}`
+          );
         },
         element: <ServiceDetails></ServiceDetails>,
       },
@@ -49,7 +51,7 @@ export const routes = createBrowserRouter([
       {
         path: "/review",
         loader: async () => {
-          return fetch("http://localhost:5000/reviews");
+          return fetch("https://server-theta-henna.vercel.app/reviews");
         },
         element: (
           <Privateroute>

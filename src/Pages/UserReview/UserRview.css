@@ -25,3 +25,10 @@
     width: 100% !important;
     border-radius: 50%;
 }
+
+@media only screen and (max-width: 600px){
+    .comment .user_pic {
+        width: 12% !important;
+        margin-right: 10px;
+    }
+}

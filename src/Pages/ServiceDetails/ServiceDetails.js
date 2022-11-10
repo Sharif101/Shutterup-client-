@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { PhotoProvider, PhotoView } from "react-photo-view";
+import toast, { Toaster } from "react-hot-toast";
 // import Form from "react-bootstrap/Form";
 import "./ServiceDetails.css";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
@@ -20,7 +21,7 @@ const ServiceDetails = () => {
   let [reviewdata, setReviewdata] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews/${_id}`)
+    fetch(` https://server-theta-henna.vercel.app/reviews/${_id}`)
       .then((res) => res.json())
       .then((res) => setReviewdata(res));
   }, [reviewdata]);
@@ -43,7 +44,7 @@ const ServiceDetails = () => {
       image,
     };
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://server-theta-henna.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -54,7 +55,7 @@ const ServiceDetails = () => {
       .then((res) => {
         console.log(res);
         if (res.acknowledged) {
-          alert("add ur review");
+          toast.success("Add your review");
           form.reset();
         }
       })
@@ -64,6 +65,7 @@ const ServiceDetails = () => {
   return (
     <div>
       <Card className="card-bd mb-5">
+        <Toaster position="top-center" reverseOrder={false} />
         <PhotoProvider>
           <PhotoView src={details.image_url}>
             <Card.Img variant="top" src={details.image_url} />
