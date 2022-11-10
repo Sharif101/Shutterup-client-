@@ -1,0 +1,27 @@
+.comment h5
+{
+    font-size: 14px;
+    font-weight: 700;
+}
+.comment p
+{
+    font-size: 13px;
+    color: rgb(128, 128, 128);
+}
+
+.comment{
+    display: flex;
+    margin-top: 20px;
+}
+
+.comment .user_pic
+{
+    width: 3% !important;
+    margin-right: 10px;
+}
+
+.comment .user_pic img
+{
+    width: 100% !important;
+    border-radius: 50%;
+}
