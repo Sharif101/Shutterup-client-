@@ -1,22 +1,24 @@
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 import "./Service.css";
 
 const Service = ({ service }) => {
-  let { name, _id, image_url, rataing, details, price } = service;
+  let { name, _id, image_url, details, price } = service;
   return (
     <div>
       <Card>
         <Card.Img className="card-img" variant="top" src={image_url} />
         <Card.Body className="card-cour">
           <Card.Title>{name}</Card.Title>
-          <Card.Text>Rataing: {rataing}</Card.Text>
-          {/* <Link to={`/courses/${id}`}>
-            <button className="enroll-btn">
-              Enroll me
-              <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+          <Card.Text>price: {price}</Card.Text>
+          <Link to={`/services/${_id}`}>
+            <button className="Show_Details">
+              Show Details
+              {/* <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon> */}
             </button>
-          </Link> */}
+          </Link>
         </Card.Body>
       </Card>
     </div>

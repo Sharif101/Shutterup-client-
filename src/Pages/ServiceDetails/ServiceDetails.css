@@ -1,0 +1,37 @@
+.card-ic
+{
+    color: rgb(197, 197, 73);
+}
+.card-bd
+{
+    background: #f0f2f39a !important;
+    box-shadow: 13px 13px 20px #cbced1,
+                -13px 9px 20px #ffffff;
+    margin-top: 10px;
+    border: none !important;
+}
+
+.card-bd img
+{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+.card-bd .text
+{
+    padding: 20px;
+}
+.card-bd h2
+{
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #202C45;
+    font-weight: 700;
+    
+}
+.card-bd p
+{
+    font-size: 14px;
+    color: #00000098;
+}
