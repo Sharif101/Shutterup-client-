@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
@@ -10,7 +11,11 @@ const ServiceDetails = () => {
   return (
     <div>
       <Card className="card-bd">
-        <Card.Img variant="top" src={details.image_url} />
+        <PhotoProvider>
+          <PhotoView src={details.image_url}>
+            <Card.Img variant="top" src={details.image_url} />
+          </PhotoView>
+        </PhotoProvider>
         <Card.Body className="text">
           <div>
             <Card.Title>
