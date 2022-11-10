@@ -6,6 +6,8 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import "./Service.css";
 
 const Service = ({ service }) => {
+  let title = "Shutter Up -Service";
+  document.title = title;
   let { name, _id, image_url, details, price } = service;
   return (
     <div>

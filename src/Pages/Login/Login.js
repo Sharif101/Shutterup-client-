@@ -12,6 +12,8 @@ import { useState } from "react";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 
 const Login = () => {
+  let title = "Shutter Up -Login";
+  document.title = title;
   let [error, setError] = useState("");
 
   let { providerlogin, githubLogin } = useContext(AuthContext);

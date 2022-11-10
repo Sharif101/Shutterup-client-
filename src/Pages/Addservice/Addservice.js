@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 const Addservice = () => {
+  let title = "Shutter Up -addservice";
+  document.title = title;
   const [service, setService] = useState({});
 
   const handleAddUser = (event) => {

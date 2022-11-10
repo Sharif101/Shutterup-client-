@@ -11,6 +11,8 @@ import { Link, useLoaderData } from "react-router-dom";
 import LimitService from "../LimitService/LimitService";
 
 const Home = () => {
+  let title = "Shutter Up -Home";
+  document.title = title;
   let limit_service = useLoaderData();
   console.log(limit_service);
   return (
