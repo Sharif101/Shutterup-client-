@@ -16,7 +16,7 @@ const Review = () => {
   const handleDelete = (_id) => {
     const proceed = window.confirm("Are you sure to delete this ?");
     if (proceed) {
-      fetch(`http://localhost:5000/reviews/${_id}`, {
+      fetch(`https://server-theta-henna.vercel.app/reviews/${_id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -32,7 +32,7 @@ const Review = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myreviews/${user?.email}`)
+    fetch(`https://server-theta-henna.vercel.app/myreviews/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setmyReviews(data));
   }, []);

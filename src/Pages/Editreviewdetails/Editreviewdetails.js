@@ -7,7 +7,7 @@ const Editreviewdetails = ({ allrev }) => {
 
   const handleUpdate = (event) => {
     event.preventDefault();
-    fetch(`http://localhost:5000/review/${_id}`, {
+    fetch(`https://server-theta-henna.vercel.app/review/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

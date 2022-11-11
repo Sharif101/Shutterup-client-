@@ -63,7 +63,9 @@ export const routes = createBrowserRouter([
       {
         path: "/updatereviews/:id",
         loader: async ({ params }) => {
-          return fetch(`http://localhost:5000/esreviews/${params.id}`);
+          return fetch(
+            `https://server-theta-henna.vercel.app/esreviews/${params.id}`
+          );
         },
         element: <Editreview></Editreview>,
       },
