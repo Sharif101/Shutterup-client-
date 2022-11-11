@@ -6,7 +6,7 @@
 
 ---
 
-[live link](https://shutter-up-f2c91.web.app)
+[live link](https://shutter-up-f2c91.web.app/)
 
 ### Features and functionality
 
